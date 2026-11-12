@@ -1,0 +1,10 @@
+{
+  "description": "A polished portfolio website with five easy-to-navigate tabs and an aesthetic hero section to showcase creative work, skills, and professional experience.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

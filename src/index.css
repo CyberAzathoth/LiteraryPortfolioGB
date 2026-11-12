@@ -2721,14 +2721,16 @@ footer::before {
   }
 
   .reflection-title {
-    font-size: clamp(56px, 17vw, 76px);
-    line-height: 0.9;
+    max-width: 9ch;
+    font-size: clamp(50px, 15vw, 70px);
+    line-height: 0.92;
+    text-wrap: balance;
   }
 
   .reflection-opening {
     width: 100%;
     margin-top: 24px;
-    padding-right: 12px;
+    padding-right: 0;
   }
 
   .reflection-opening-copy {
@@ -2743,19 +2745,28 @@ footer::before {
     right: auto;
     bottom: auto;
     width: calc(100% + 40px);
-    height: clamp(440px, 140vw, 600px);
-    margin-top: 26px;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    margin-top: 24px;
     margin-left: -20px;
   }
 
+  .reflection-visual img {
+    object-position: center;
+  }
+
   .reflection-visual > div {
-    background:
-      linear-gradient(90deg, var(--paper) 0%, rgba(5, 5, 5, 0.62) 18%, transparent 58%),
-      linear-gradient(0deg, rgba(5, 5, 5, 0.35) 0%, transparent 10%);
+    background: linear-gradient(
+      180deg,
+      var(--paper) 0%,
+      transparent 18%,
+      transparent 82%,
+      var(--paper) 100%
+    );
   }
 
   .reflection-list {
-    margin-top: 40px;
+    margin-top: 32px;
   }
 
   .reflection-closing-quote {
@@ -2773,17 +2784,21 @@ footer::before {
   }
 
   .reflection-row {
-    grid-template-columns: 1fr;
-    gap: 18px;
-    padding: 44px 0;
+    grid-template-columns: 28px minmax(0, 1fr);
+    column-gap: 12px;
+    row-gap: 18px;
+    padding: 40px 0;
   }
 
   .reflection-row-title {
-    font-size: 32px;
-    line-height: 1.05;
+    min-width: 0;
+    font-size: clamp(28px, 8.5vw, 34px);
+    line-height: 1.08;
+    overflow-wrap: anywhere;
   }
 
   .reflection-row-copy {
+    grid-column: 2;
     max-width: 100%;
     font-size: 15px;
     line-height: 1.75;
@@ -2803,8 +2818,8 @@ footer::before {
   }
 
   .reflection-page {
-    padding-right: 4px;
-    padding-left: 4px;
+    padding-right: 0;
+    padding-left: 0;
   }
 }
 
